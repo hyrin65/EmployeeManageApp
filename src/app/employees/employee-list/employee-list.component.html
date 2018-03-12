@@ -2,14 +2,16 @@
 	<thead>
 		<tr>
 			<th>Employee Name</th>
+			<th>Phone Number</th>
 			<th>Position</th>
 			<th>Office</th>
 			<th></th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let employee of employeeService.employeeList">
+		<tr *ngFor="let employee of employeeService.employeeList | paginate: { itemsPerPage: 10, currentPage: p }">
 			<td>{{employee.FirstName}} {{employee.LastName}}</td>
+			<td>{{employee.PhoneNumber}}</td>
 			<td>{{employee.Position}}</td>
 			<td>{{employee.Office}}</td>
 			<td>
@@ -21,6 +23,9 @@
 					<i class="far fa-trash-alt"></i>
 				</a>
 			</td>
+		</tr>
+		<tr>
+			<pagination-controls (pageChange)="p = $event"></pagination-controls>
 		</tr>
 	</tbody>
 </table>

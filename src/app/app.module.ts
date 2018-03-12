@@ -10,6 +10,7 @@ import { EmployeeListComponent } from './employees/employee-list/employee-list.c
 import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         HttpModule,
         ToastrModule.forRoot(),
         AppRoutingModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        NgxPaginationModule
     ],
     providers: [],
     bootstrap: [AppComponent]

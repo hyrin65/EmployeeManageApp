@@ -30,6 +30,11 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <input type="text" class="form-control" name="PhoneNumber" #PhoneNumber="ngModel" [(ngModel)]="employeeService.selectedEmployee.PhoneNumber"
+                            placeholder="Phone Number" required>
+                        <div class="validation-error" *ngIf="PhoneNumber.invalid && PhoneNumber.touched">This Fiels is Required.</div>
+                    </div>
+                    <div class="form-group">
                         <input type="text" class="form-control" name="Position" #Position="ngModel" [(ngModel)]="employeeService.selectedEmployee.Position"
                             placeholder="Position" required>
                         <div class="validation-error" *ngIf="Position.invalid && Position.touched">This Fiels is Required.</div>

@@ -23,6 +23,7 @@ export class EmployeeComponent implements OnInit {
             EmployeeId: null,
             FirstName: '',
             LastName: '',
+            PhoneNumber: null,
             EmpCode: '',
             Position: '',
             Office: ''
