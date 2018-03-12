@@ -1,0 +1,9 @@
+button.emp-create a{
+    color: aliceblue;
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+}
+button.emp-create {
+    margin: 10px;
+}
