@@ -43,6 +43,7 @@ export class EmployeeComponent implements OnInit {
             this.employeeService.putEmployeeEdit(form.value.EmployeeId, form.value)
                 .subscribe(data => {
                     this.resetForm(form);
+                    this.closeModal.nativeElement.click();
                     this.employeeService.getEmployeeList();
                     this.toastr.info('Update ' + employeeName + '\'Infomation Successfully', 'Employee Update');
                 })

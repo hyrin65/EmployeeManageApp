@@ -13,9 +13,10 @@
 			<td>{{employee.Position}}</td>
 			<td>{{employee.Office}}</td>
 			<td>
-				<a class="btn" (click)="showEdit(employee)">
+				<a class="btn" (click)="showEdit(employee)" data-toggle="modal" data-target="#employeeCreate">
 					<i class="far fa-edit"></i>
-				</a> |
+				</a>
+				|
 				<a class="btn text-danger" (click)="deteleEmployee(employee.EmployeeId)">
 					<i class="far fa-trash-alt"></i>
 				</a>
@@ -23,3 +24,4 @@
 		</tr>
 	</tbody>
 </table>
+<app-employee></app-employee>
