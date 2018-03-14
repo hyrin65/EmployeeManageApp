@@ -1,0 +1,9 @@
+button.lib-upload a{
+    color: aliceblue;
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+}
+button.lib-upload {
+    margin: 10px;
+}

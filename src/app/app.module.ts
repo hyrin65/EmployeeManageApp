@@ -11,13 +11,19 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { LibraryComponent } from './library/library.component';
+import { LibraryUploadComponent } from './library/library-upload/library-upload.component';
+import { LibraryListComponent } from './library/library-list/library-list.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         EmployeesComponent,
         EmployeeComponent,
-        EmployeeListComponent
+        EmployeeListComponent,
+        LibraryComponent,
+        LibraryUploadComponent,
+        LibraryListComponent,
     ],
     imports: [
         BrowserModule,
