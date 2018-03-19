@@ -1,0 +1,8 @@
+<div class="modal fade image-detail" id="selectedImageModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <img *ngIf="selectedImage" src="{{selectedImage.url}}">
+            <a routerLink="/image-position" data-dismiss="modal" style="text-align: center">Go To Place<i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</div>

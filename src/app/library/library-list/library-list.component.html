@@ -1,3 +1,6 @@
-<p>
-  library-list works!
-</p>
+<ul id="thumbnailsList">
+    <li *ngFor="let image of datasource | libraryPipe:filterId">
+        <img src="{{image.url}}" class="tn" data-toggle="modal" data-target="#selectedImageModal" (click)=setSelectedImage(image)>
+    </li>
+</ul>
+<app-library-detail [selectedImage]="selectedImage"></app-library-detail>

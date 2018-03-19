@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-library-list',
-  templateUrl: './library-list.component.html',
-  styleUrls: ['./library-list.component.css']
+    selector: 'app-library-list',
+    templateUrl: './library-list.component.html',
+    styleUrls: ['./library-list.component.css']
 })
 export class LibraryListComponent implements OnInit {
+    @Input() datasource;
+    @Input() filterId;
+    selectedImage;
+    constructor() { }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+    ngOnInit() {
+        //console.log(this.datasource);
+    }
+    setSelectedImage(image) {
+        this.selectedImage = image;
+    }
 }

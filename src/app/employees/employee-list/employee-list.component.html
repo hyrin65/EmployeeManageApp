@@ -1,32 +1,36 @@
 <table class="table table-sm table-hover">
-	<thead>
-		<tr>
-			<th>Employee Name</th>
-			<th>Phone Number</th>
-			<th>Position</th>
-			<th>Office</th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr *ngFor="let employee of employeeService.employeeList | paginate: { itemsPerPage: 10, currentPage: p }">
-			<td>{{employee.FirstName}} {{employee.LastName}}</td>
-			<td>{{employee.PhoneNumber}}</td>
-			<td>{{employee.Position}}</td>
-			<td>{{employee.Office}}</td>
-			<td>
-				<a class="btn" (click)="showEdit(employee)" data-toggle="modal" data-target="#employeeCreate">
-					<i class="far fa-edit"></i>
-				</a>
-				|
-				<a class="btn text-danger" (click)="deteleEmployee(employee.EmployeeId)">
-					<i class="far fa-trash-alt"></i>
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<pagination-controls (pageChange)="p = $event"></pagination-controls>
-		</tr>
-	</tbody>
+    <thead>
+        <tr>
+            <th>Employee Name</th>
+            <th>Phone Number</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeService.employeeList | paginate: { itemsPerPage: 10, currentPage: p }">
+            <td>
+                <a routerLink="/library/{{employee.EmployeeId}}">
+                    {{employee.FirstName}} {{employee.LastName}}
+                </a>
+            </td>
+            <td>{{employee.PhoneNumber}}</td>
+            <td>{{employee.Position}}</td>
+            <td>{{employee.Office}}</td>
+            <td>
+                <a class="btn" (click)="showEdit(employee)" data-toggle="modal" data-target="#employeeCreate">
+                    <i class="far fa-edit"></i>
+                </a>
+                |
+                <a class="btn text-danger" (click)="deteleEmployee(employee.EmployeeId)">
+                    <i class="far fa-trash-alt"></i>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </tr>
+    </tbody>
 </table>
 <app-employee></app-employee>

@@ -14,6 +14,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { LibraryComponent } from './library/library.component';
 import { LibraryUploadComponent } from './library/library-upload/library-upload.component';
 import { LibraryListComponent } from './library/library-list/library-list.component';
+import { LibraryDetailComponent } from './library/library-list/library-detail/library-detail.component';
+import { AgmCoreModule } from '@agm/core';
+import { LibraryImagePositionComponent } from './library/library-list/library-image-position/library-image-position.component';
+import { LibraryPipePipe } from './library/library-list/library-pipe.pipe';
 
 @NgModule({
     declarations: [
@@ -24,6 +28,9 @@ import { LibraryListComponent } from './library/library-list/library-list.compon
         LibraryComponent,
         LibraryUploadComponent,
         LibraryListComponent,
+        LibraryDetailComponent,
+        LibraryImagePositionComponent,
+        LibraryPipePipe,
     ],
     imports: [
         BrowserModule,
@@ -32,7 +39,10 @@ import { LibraryListComponent } from './library/library-list/library-list.compon
         ToastrModule.forRoot(),
         AppRoutingModule,
         BrowserAnimationsModule,
-        NgxPaginationModule
+        NgxPaginationModule,
+        AgmCoreModule.forRoot({
+          apiKey: 'AIzaSyAnZHqT3QrW7IxxsZ00QTet-znnPjaPPYk'
+        })
     ],
     providers: [],
     bootstrap: [AppComponent]

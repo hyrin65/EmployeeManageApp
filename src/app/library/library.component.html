@@ -1,12 +1,13 @@
 <div>
-    <h2 class="jumbotron bg-secondary text-white">Library List </h2>
+    <h2 class="jumbotron bg-secondary text-white" *ngIf="employeeService.selectedEmployee && !checkId">{{employeeService.selectedEmployee.LastName}} {{employeeService.selectedEmployee.FirstName}} 's Library</h2>
+    <h2 class="jumbotron bg-secondary text-white" *ngIf="checkId">All's Library</h2>
 </div>
 <div class="row">
     <div class="col-md-12">
         <button type="button" class="btn btn-primary lib-upload" data-toggle="modal" data-target="#newImage">New Image</button>
     </div>
     <div class="col-md-12">
-        <app-library-list></app-library-list>
+        <app-library-list [datasource]=images [filterId]=filterId></app-library-list>
     </div>
 </div>
 <app-library-upload></app-library-upload>
